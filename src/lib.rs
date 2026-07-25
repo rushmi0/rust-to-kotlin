@@ -3,7 +3,7 @@ pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
 
-uniffi::setup_scaffolding!("rustlin");
+uniffi::setup_scaffolding!("demo");
 
 #[cfg(test)]
 mod tests {

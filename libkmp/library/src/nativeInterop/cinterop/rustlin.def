@@ -1,2 +1,0 @@
-headers = rustlin.h
-staticLibraries = librustlin.a

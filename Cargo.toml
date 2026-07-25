@@ -1,11 +1,11 @@
 [package]
-name = "rustlin"
+name = "demo"
 version = "0.1.0"
 edition = "2024"
 
 [lib]
-name = "rustlin"
+name = "demo"
 crate-type = ["cdylib", "staticlib", "rlib"]
 
 [dependencies]
-uniffi = { version = "0.32.0", features = ["tokio", "cli"] }
+uniffi = { version = "=0.29.4", features = ["tokio", "cli"] }

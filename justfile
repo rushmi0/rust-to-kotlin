@@ -11,7 +11,7 @@ jni_dir     := android_dir / "jniLibs"
 common_dir  := src_dir / "commonMain"
 native_dir  := src_dir / "nativeMain"
 jvm_dir     := src_dir / "jvmMain"
-artifact    := "rustlin"
+artifact    := "demo"
 
 # Full pipeline (add ios before clean-kmp when building on macOS)
 default: build-host build-android build-linux build-windows clean-kmp generate-bindings copy-android copy-linux-glibc copy-linux-musl copy-freebsd copy-windows build-kmp
@@ -32,7 +32,7 @@ setup:
     rustup show
 
 build-host: setup
-    cargo build --lib --release
+    cargo build --lib
 
 build-android: setup
     cargo ndk -t arm64-v8a -t armeabi-v7a -t x86 -t x86_64 -P 24 build --lib --release

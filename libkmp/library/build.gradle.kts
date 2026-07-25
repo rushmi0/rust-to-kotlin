@@ -47,10 +47,10 @@ kotlin {
             "iosX64" -> "ios-simulator-x64"
             else -> error("Unsupported iOS target: ${target.targetName}")
         }
-        target.compilations["main"].cinterops.create("rustlin") {
-            defFile(project.file("src/nativeInterop/cinterop/rustlin.def"))
+        target.compilations["main"].cinterops.create("demo") {
+            defFile(project.file("src/nativeInterop/cinterop/demo.def"))
             includeDirs(
-                project.file("src/nativeInterop/cinterop/headers/rustlin"),
+                project.file("src/nativeInterop/cinterop/headers/demo"),
                 project.file("src/lib/$platform"),
             )
         }
@@ -86,8 +86,8 @@ kotlin {
 
 tasks.withType<Test>().configureEach {
     if (name == "testAndroidHostTest") {
-        val libPath = projectDir.resolve("src/jvmMain/resources/linux-x86-64/librustlin.so").absolutePath
-        systemProperty("uniffi.component.rustlin.libraryOverride", libPath)
+        val libPath = projectDir.resolve("src/jvmMain/resources/linux-x86-64/libdemo.so").absolutePath
+        systemProperty("uniffi.component.demo.libraryOverride", libPath)
     }
 }
 

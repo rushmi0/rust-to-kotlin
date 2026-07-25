@@ -1,0 +1,2 @@
+headers = demo.h
+staticLibraries = libdemo.a
