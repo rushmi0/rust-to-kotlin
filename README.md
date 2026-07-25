@@ -1,4 +1,4 @@
-# rustlin
+# rust-to-kotlin
 
 A template for integrating Rust with Kotlin Multiplatform (KMP) using [UniFFI](https://mozilla.github.io/uniffi-rs/) and [gobley](https://gobley.dev/).
 
