@@ -107,7 +107,7 @@ These tools are required for Windows builds.
 
 ```bash
 # Fedora / RHEL
-sudo dnf install clang lld cmake
+sudo dnf install clang lld cmake llvm
 ```
 
 Install `cargo-xwin`:
